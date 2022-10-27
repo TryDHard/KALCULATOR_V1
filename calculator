@@ -1,0 +1,104 @@
+#include <iostream>
+#include <conio.h>
+#include <math.h>
+
+using namespace std;
+
+int main()
+{
+
+    int calc;
+    int a;
+    int b;
+    int c;
+    int ram;
+    int d;
+    int z;
+
+    char oper;
+
+    std::cout << "Enter number of calculator: " << "\n";
+    std::cout << "1)Base " << "\n";
+    std::cout << "2)Factorial calculator " << "\n";
+    std::cout << "3)Search radical " << "\n";
+
+    std::cin >> calc;
+
+    if (calc ==1)
+    {
+        std::cout <<"enter first number" << '\n';
+        std::cin >> a;
+
+        std::cout <<"enter operation" << '\n';
+        std::cin >> oper;
+
+        std::cout <<"enter first number" << '\n';
+        std::cin >> b;
+
+    if (oper =='-')
+        {
+            std::cout << "a - b = " << a - b << '\n';
+        }
+
+    if (oper =='+')
+        {
+            std::cout << "a + b = " << a + b << '\n';
+        }
+
+    if (oper =='/')
+        {
+            std::cout << "a / b = " << a / b << '\n';
+        }
+
+    if (oper =='*')
+        {
+            std::cout << "a * b = " << a * b << '\n';
+        }
+
+
+    }
+
+    if (calc ==2)
+    {
+        std::cout << "Enter factorial number: " << "\n";
+
+        std::cin >> a;
+        ram = 1;
+        for (b = 1; b <= a; b++) {
+            ram = ram * b;
+        }
+        cout << ram;
+        getch();
+    }
+
+    if (calc ==3) {
+        std::cout << "Enter a " << '\n';
+        std::cout << "Enter b " << '\n';
+        std::cout << "Enter c " << '\n';
+        std::cout << "following the formula ax^2 + bx + c" << '\n';
+        std::cin >> a;
+        std::cin >> b;
+        std::cin >> c;
+
+        d = ((b * b) - (4 * a * c));
+        z = sqrt(d);
+        if (d > 0)
+        {
+            std::cout << d << '\n';
+            std::cout << "x1=" << ((-b) + z) / (2 * a) << '\n';
+            std::cout << "x2=" << ((-b) - z) / (2 * a) << '\n';
+        }
+
+        if (d == 0)
+        {
+            std::cout << d << '\n';
+            std::cout << -b << '/' << (2 * a) << '\n';
+        }
+
+        if (d < 0)
+        {
+            std::cout << d << '\n';
+            std::cout << "No solutions" << '\n';
+        }
+    }
+}
